@@ -1,0 +1,21 @@
+{
+  "name": "hilleljavascript",
+  "version": "1.0.0",
+  "description": "npm homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "npm",
+    "homework"
+  ],
+  "author": "efftushkin",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
