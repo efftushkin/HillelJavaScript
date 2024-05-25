@@ -1,5 +1,16 @@
-# HillelJavaScript
+# ДЗ 6. Створення компоненту V2
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
-
-A new branch will be created for each work.
+Потрібно створити компонент Card.vue, який:
+1. Повинен повертати наступну структуру:
+```
+<div className="card">
+   <div className="card-body">
+     <h4 className="card-title">hi</h4>
+     <p className="card-text">how are you?</p>
+   </div>
+</div>
+```
+2. Компонент приймає 2 пропса - title і text
+3. Необхідно прийняти їх у компоненті та рендерити у відповідних місцях
+4. Якщо якогось пропса не вистачає (не був переданий у компонент), то не рендеримо HTML-код, який його обгортає
+5. Підключіть компонент у App і рендеріть його 3 рази (передаючи пропси по черзі) 
