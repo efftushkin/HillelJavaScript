@@ -1,5 +1,14 @@
-# HillelJavaScript
+# ДЗ 5. Створення компоненту V1
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
-
-A new branch will be created for each work.
+1. Встановіть Vue
+2. Реалізуйте компонент Card, котрий буде повертати:
+```
+<div className="card">
+    <div className="card-body">
+        <h4 className="card-title">Card title</h4>
+        <p className="card-text">Some quick example text to build on the card</p>
+        <button type="button" className="btn btn-primary">Go somewhere</button>
+    </div>
+</div>
+```
+3. Імпортуйте компонент в App та відрендеріть його 
