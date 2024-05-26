@@ -1,26 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <card-hw6 title="Card Without Text"/>
+  <card-hw6 text="Text of the card with text only"/>
+  <card-hw6 title="Card With Title and Text" text="Text of the card with title and text"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardHw6 from './components/Card.vue'
 
 export default {
-  name: 'App',
+  name: 'HomeWork6',
   components: {
-    HelloWorld
+    CardHw6
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
