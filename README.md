@@ -1,5 +1,16 @@
-# HillelJavaScript
+# ДЗ 10. Alert.vue
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
+Реалізуйте компонент Alert, який відображає алерт в стилі Bootstrap. Компонент приймає дві властивості:
 
-A new branch will be created for each work.
+**text** — текст, який відображається
+
+**type** — тип алерта, може бути одним з наступних значень: **primary**, **secondary**, **success**, **danger**, **warning**, **info**, **light**, **dark**
+
+Приклад використання:
+```
+<Alert :type="warning" :text="what is love?" />
+```
+Вивід:
+```
+<div class="alert alert-warning" role="alert">what is love?</div>
+```
