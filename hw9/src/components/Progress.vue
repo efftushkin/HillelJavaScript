@@ -1,6 +1,6 @@
 <template>
   <div class="progress">
-    <div :class="classWithBackground" role="progressbar" :style="{ width: percents }" :aria-valuenow=percentage aria-valuemin="0" aria-valuemax="100">{{ percents }}</div>
+    <div :class="classWithBackground" role="progressbar" :style="{ width: percents }" :aria-valuenow=percentage aria-valuemin="0" aria-valuemax="100" aria-label="progressbar">{{ percents }}</div>
   </div>
 </template>
 
