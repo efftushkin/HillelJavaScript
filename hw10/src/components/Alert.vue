@@ -1,5 +1,5 @@
 <template>
-  <div :class="alertClass">[{{ type }}] {{ text }}</div>
+  <div :class="alertClass" role="alert">[{{ type }}] {{ text }}</div>
 </template>
 
 <script>
