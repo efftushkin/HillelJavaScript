@@ -1,5 +1,15 @@
-# HillelJavaScript
+# ДЗ 13. BtnGroup
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
+Реалізуйте компонент BtnGroup, який малює дві кнопки. Натискання на будь-яку з кнопок робить її активною, а іншу неактивною. При першому завантаженні жодна з кнопок не натиснута
 
-A new branch will be created for each work.
+Приклад використання:
+```
+<BtnGroup />
+```
+Результат:
+```
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-secondary left">Left</button>
+  <button type="button" class="btn btn-secondary right">Right</button>
+</div>
+```
