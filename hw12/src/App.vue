@@ -1,9 +1,9 @@
 <template>
-  <list-group-hw12 :elements="kids"/>
+  <list-group :elements="kids"/>
 </template>
 
 <script>
-import ListGroupHw12 from './components/ListGroup.vue'
+import ListGroup from './components/ListGroup.vue'
 
 export default {
   name: 'App',
@@ -18,7 +18,7 @@ export default {
       };
     },
     components: {
-    ListGroupHw12
+    ListGroup
   }
 }
 </script>

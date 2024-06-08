@@ -2,19 +2,19 @@
   <div>
     <ul class="list-group">
       <li :class="['list-group-item', element.active && 'active']" v-for="(element, index) in list" :key="index" @click="makeActive(element)">
-        <slot-paragraph-hw12>
+        <slot-paragraph>
           <template v-slot:paragraph>{{ element.item }}</template>
-        </slot-paragraph-hw12>
+        </slot-paragraph>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import SlotParagraphHw12 from './SlotParagraph.vue'
+import SlotParagraph from './SlotParagraph.vue'
 
 export default {
-  name: 'ListGroupHw12',
+  name: 'ListGroup',
   props: {
     elements: {
       type: Array,
@@ -34,7 +34,7 @@ export default {
     }
   },
   components: {
-    SlotParagraphHw12
+    SlotParagraph
   }
 }
 </script>
