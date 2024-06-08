@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import ProgressHw9 from './components/Progress.vue'
+import ProgressHw9 from './components/ProgressHw9.vue'
 
 export default {
   name: 'App',
