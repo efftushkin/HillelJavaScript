@@ -1,41 +1,27 @@
 <template>
   <div class="btn-group" role="group">
-    <button type="button" :class="classLeftButton" @click="clickLeftButton">Left</button>
-    <button type="button" :class="classRightButton" @click="clickRightButton">Right</button>
+    <button type="button" :class="['btn btn-secondary', 'left', leftButtonActive && 'active']" @click="clickLeftButton">Left</button>
+    <button type="button" :class="['btn btn-secondary', 'right', rightButtonActive && 'active']" @click="clickRightButton">Right</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BtnGroupHw13',
+  name: 'BtnGroup',
   data() {
     return {
-      isLeftButtonActive: false,
-      isRightButtonActive: false
-    }
-  },
-  computed: {
-    classLeftButton() {
-      if (this.isLeftButtonActive) {
-        return 'btn btn-secondary active left';
-      }
-      return 'btn btn-secondary left';
-    },
-    classRightButton() {
-      if (this.isRightButtonActive) {
-        return 'btn btn-secondary active right';
-      }
-      return 'btn btn-secondary right';
+      leftButtonActive: false,
+      rightButtonActive: false
     }
   },
   methods: {
     clickLeftButton() {
-      this.isLeftButtonActive = true;
-      this.isRightButtonActive = false;
+      this.leftButtonActive = true;
+      this.rightButtonActive = false;
     },
     clickRightButton() {
-      this.isRightButtonActive = true;
-      this.isLeftButtonActive = false;
+      this.rightButtonActive = true;
+      this.leftButtonActive = false;
     }
   }
 }

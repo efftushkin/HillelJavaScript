@@ -1,14 +1,14 @@
 <template>
-  <btn-group-hw13 />
+  <btn-group />
 </template>
 
 <script>
-import BtnGroupHw13 from './components/BtnGroup.vue'
+import BtnGroup from './components/BtnGroup.vue'
 
 export default {
   name: 'App',
   components: {
-    BtnGroupHw13
+    BtnGroup
   }
 }
 </script>
