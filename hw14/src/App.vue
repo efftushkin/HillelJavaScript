@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import CarouselHw14 from './components/Carousel.vue'
+import CarouselHw14 from './components/CarouselHw14.vue'
 
 export default {
   name: 'App',

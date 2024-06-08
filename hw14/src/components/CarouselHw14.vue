@@ -33,18 +33,11 @@ export default {
   methods: {
     previous() {
       if (this.carouselElements.length < 2) return;
-      
       let maxIndex = this.carouselElements.length - 1;
-      
       for (let index = 0; index <= maxIndex; index++) {
         if (this.carouselElements[index].active) {
           this.carouselElements[index].active = false;
-          
-          if (index == 0) {
-            this.carouselElements[maxIndex].active = true;
-          } else {
-            this.carouselElements[index - 1].active = true;
-          }
+          this.carouselElements[index == 0 ? maxIndex: index - 1].active = true;
           return;
         }
       }
@@ -55,11 +48,7 @@ export default {
       for (let index = 0; index <= maxIndex; index++) {
         if (this.carouselElements[index].active) {
           this.carouselElements[index].active = false;
-          if (index == maxIndex) {
-            this.carouselElements[0].active = true;
-          } else {
-            this.carouselElements[index + 1].active = true;
-          }
+          this.carouselElements[index == maxIndex ? 0 : index + 1].active = true
           return;
         }
       }
