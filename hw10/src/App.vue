@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AlertHw10 from './components/Alert.vue'
+import AlertHw10 from './components/AlertHw10.vue'
 
 export default {
   name: 'HomeWork10',
