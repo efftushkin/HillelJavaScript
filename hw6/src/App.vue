@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CardHw6 from './components/Card.vue'
+import CardHw6 from './components/CardHw6.vue'
 
 export default {
   name: 'HomeWork6',
