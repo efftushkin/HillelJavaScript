@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DefinitionsHw8 from './components/Definitions.vue'
+import DefinitionsHw8 from './components/DefinitionsHw8.vue'
 
 export default {
   name: 'HomeWork8',

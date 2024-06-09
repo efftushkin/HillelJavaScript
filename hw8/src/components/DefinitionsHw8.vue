@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DefinitionHw8 from './Definition.vue'
+import DefinitionHw8 from './DefinitionHw8.vue'
 
 export default {
   name: 'DefinitionsHw8',
