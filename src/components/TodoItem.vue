@@ -22,9 +22,11 @@
         />
       </el-select>
     </div>
-    <div>
-      <el-button type="danger" @click="handleRemoveTodoItem()">Remove</el-button>
-    </div>
+    <template #footer>
+      <div>
+        <el-button type="danger" @click="handleRemoveTodoItem()">Remove</el-button>
+      </div>
+    </template>
   </el-card>
 </template>
 

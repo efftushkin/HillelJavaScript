@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "element-plus": "^2.7.6",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-yup-form": "^1.0.8",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

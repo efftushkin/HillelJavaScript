@@ -2,8 +2,9 @@
   <el-form :model="form">
     <h3 class="text-large font-600 mr-3">Create Todo Item</h3>
     <el-form-item>
-      <el-input v-model="form.title" placeholder="Title" size="large"/>
+      <el-input v-model="form.title" placeholder="Title" size="large" @blur="validateField('title')"/>
     </el-form-item>
+    <el-text class="mx-1" type="danger" v-if="errors.title">{{ errors.title }}</el-text>
     <el-form-item>
       <el-input type="textarea" v-model="form.description" placeholder="Description" size="large"/>
     </el-form-item>
@@ -26,8 +27,9 @@
 </template>
 
 <script>
-import {ElForm, ElFormItem, ElInput, ElSelect, ElOption, ElButton} from "element-plus";
+import {ElForm, ElFormItem, ElInput, ElSelect, ElOption, ElText, ElButton} from "element-plus";
 import {todoStatuses} from "../common/options.js";
+import {validationSchema} from "../schemas/validationSchema.js";
 
 export default {
   name: 'TodoForm',
@@ -37,6 +39,7 @@ export default {
     ElInput,
     ElSelect,
     ElOption,
+    ElText,
     ElButton
   },
   data() {
@@ -45,7 +48,8 @@ export default {
         title: '',
         description: '',
         status: 'new'
-      }
+      },
+      errors: {}
     }
   },
   computed: {
@@ -54,8 +58,40 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
-      this.$emit('setTodoItems', this.form);
+    async validateField(field) {
+      try {
+        await validationSchema.validateAt(field, this.form);
+        this.errors[field] = null;
+      } catch (err) {
+        this.errors[field] = err.message;
+      }
+    },
+    async validate() {
+      try {
+        await validationSchema.validate(this.form, { abortEarly: false });
+        this.errors = {};
+        return true;
+      } catch (err) {
+        const validationErrors = {};
+        err.inner.forEach((error) => {
+          validationErrors[error.path] = error.message;
+        });
+        this.errors = validationErrors;
+        return false;
+      }
+    },
+    async handleSubmit() {
+      const isValid = await this.validate();
+      if (isValid) {
+        this.$emit('setTodoItems', this.form);
+        this.initForm();
+      }
+    },
+    initForm() {
+      this.form.title = '';
+      this.form.description = '';
+      this.form.status = 'new';
+      this.errors = {};
     }
   }
 }
