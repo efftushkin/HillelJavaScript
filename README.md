@@ -1,5 +1,14 @@
-# HillelJavaScript
+## Написати TodoList так, як ми почали писати на уроці
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
+Потрібно реалізувати проект todo-list, використовуючи наступні технології:  
+Vue3 Options api  
+ElementUI  
+vue-yup  
+localStorage
 
-A new branch will be created for each work.
+При першому завантаженні треба перевірити чи є дані в localStorage. Якщо є, то завантажити в стан компонента  
+При будь-яких змінах даних треба зберігати їх в localStorage  
+На кожному елементі туду треба додати кнопку видалення. При натисканні на неї повинен видалятися елемент даних з localStorage  
+Зміни в даних повинні динамічно відображатися на сторінці
+
+Підказка - під час збереження масиву даних в localStorage до кожного елементу додавайте унікальний ID
