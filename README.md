@@ -1,5 +1,3 @@
-# HillelJavaScript
+# ДЗ 19. Pinia TodoList bugfix
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
-
-A new branch will be created for each work.
+На основі коду із заняття №14 необхідно пофіксити баг зі зміною id у нового елемента при виклиці state.getItems
