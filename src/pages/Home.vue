@@ -16,12 +16,10 @@
           <el-table-column prop="title" label="Title" />
           <el-table-column prop="description" label="Description" />
           <el-table-column prop="status" label="Status" />
-          <el-table-column prop="status" label="Actions" fixed="right">
+          <el-table-column label="Actions" fixed="right">
             <template #default="scope">
               <el-button type="primary" size="small" @click="handleEdit(scope.row)">Edit</el-button>
-              <el-button type="danger" size="small" @click="handleRemove(scope.row)">
-                X
-              </el-button>
+              <el-button type="danger" size="small" @click="handleRemove(scope.row)">X</el-button>
             </template>
           </el-table-column>
         </el-table>
