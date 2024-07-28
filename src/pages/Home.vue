@@ -46,7 +46,7 @@ const gotoCreate = () => {
   router.push({name: 'create'})
 }
 const handleEdit = (row) => {
-  router.push(`edit/${row.id - 1}`)
+  router.push(`edit/${row.id}`)
 }
 const handleRemove = (row) => {
   store.removeItem(row.id);

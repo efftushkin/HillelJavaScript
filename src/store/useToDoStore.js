@@ -22,7 +22,7 @@ export const useToDoStore = defineStore('TodoStore', {
     getItems() {
       let data = JSON.parse(localStorage.getItem(this.key));
       this.todoList = data ? data : []
-      this.currentId = data.length ? ++data.at(-1).id : 1
+      this.currentId = this.todoList.length ? data.at(-1).id + 1 : 1
     },
     removeItem(id) {
       this.todoList = this.todoList.filter(item => item.id !== id)
@@ -30,8 +30,8 @@ export const useToDoStore = defineStore('TodoStore', {
       this.currentId = this.todoList.length ? ++this.todoList.at(-1).id : 1
     },
     changeItemFields(id, itemNewData) {
-      const index = this.todoList.findIndex(item => item.id === id)
-      if(index) {
+      const index = this.todoList.findIndex(item => item.id === Number(id))
+      if(index >= 0) {
         this.todoList[index] = itemNewData
       }
       localStorage.setItem(this.key, JSON.stringify(this.todoList));
