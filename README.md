@@ -1,5 +1,5 @@
-# HillelJavaScript
+# ДЗ 20. MovieFinder, Single Movie
 
-Homeworks completed as part of the JavaScript course in Hillel school will be stored here.
+На основі наданого проекту зробити виведення даних про фільм на сторінку одного фільму, також додати перевірку на наявність помилок і увипадку помилки перекидати на error.vue
 
-A new branch will be created for each work.
+https://www.omdbapi.com/ - документація по API
