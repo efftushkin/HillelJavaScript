@@ -27,24 +27,22 @@ const query = ref('')
 const moviesList = ref([])
 
 const getMovies = async () => {
-  const data = await useFetch('http://www.omdbapi.com/?apikey=21eac196&s=' + query.value)
+  const data = await $fetch('http://www.omdbapi.com/?apikey=21eac196&s=' + query.value)
 
-  console.log(data)
-
-  if(data.data?.value?.Response === 'False') {
+  if(data.Response === 'False') {
     throw createError({
       statusCode: 404,
-      statusMessage: data.data.value.Error,
+      statusMessage: data.Error,
       fatal: true
     })
-  } else if(data.error.value) {
+  } else if(data?.error?.value) {
     throw createError({
       statusCode: data.error.value.statusCode,
       statusMessage: data.error.value.statusMessage,
       fatal: true
     })
   } else {
-    moviesList.value = (data.data.value.Search)
+    moviesList.value = (data.Search)
   }
 }
 </script>
